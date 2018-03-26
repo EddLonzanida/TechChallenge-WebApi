@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\TechChallengeAspNetCore.Contracts\TechChallengeAspNetCore.Contracts.csproj" />
+    <ProjectReference Include="..\TechChallengeAspNetCore.Business.Common\TechChallengeAspNetCore.Business.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Eml.Mediator" Version="2.0.0.23" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

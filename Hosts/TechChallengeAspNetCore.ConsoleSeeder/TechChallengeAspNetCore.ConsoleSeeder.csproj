@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\TechChallengeAspNetCore.Contracts\TechChallengeAspNetCore.Contracts.csproj" />
+    <ProjectReference Include="..\..\Business\TechChallengeAspNetCore.Business.Common\TechChallengeAspNetCore.Business.Common.csproj" />
+    <ProjectReference Include="..\..\Business\TechChallengeAspNetCore.Business\TechChallengeAspNetCore.Business.csproj" />
+    <ProjectReference Include="..\..\Data\TechChallengeAspNetCore.Data\TechChallengeAspNetCore.Data.csproj" />
+    <ProjectReference Include="..\TechChallengeAspNetCore.ApiHost\TechChallengeAspNetCore.ApiHost.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

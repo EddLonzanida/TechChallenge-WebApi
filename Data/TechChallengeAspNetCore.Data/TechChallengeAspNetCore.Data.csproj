@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\TechChallengeAspNetCore.Contracts\TechChallengeAspNetCore.Contracts.csproj" />
+    <ProjectReference Include="..\..\Business\TechChallengeAspNetCore.Business.Common\TechChallengeAspNetCore.Business.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Eml.DataRepository" Version="2.0.0.152" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+
+					<ItemGroup>
+						<None Update="Migrations\JsonSources\bets.json">
+							<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+						</None>
+						<None Update="Migrations\JsonSources\customers.json">
+							<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+						</None>
+						<None Update="Migrations\JsonSources\races.json">
+							<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+						</None>
+					</ItemGroup>
+					
+</Project>
