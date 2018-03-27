@@ -3,25 +3,27 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:2051/",
-      "sslPort": 0
+      "applicationUrl": "https://localhost:44361/",
+      "sslPort": 44361
     }
   },
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+      "launchUrl": "docs",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "TechChallengeAspNetCore.ApiHost": {
+    "TechChallengeAspNetCore.ApiHost.Properties": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:2052/"
+      "applicationUrl": "http://localhost:2239/"
     }
   }
 }
+

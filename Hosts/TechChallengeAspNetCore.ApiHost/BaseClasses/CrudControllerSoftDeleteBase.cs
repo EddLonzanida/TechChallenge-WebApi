@@ -99,6 +99,19 @@ namespace TechChallengeAspNetCore.ApiHost.BaseClasses
             return Ok(item);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Suggestions(string search = "")
+        {
+            var searchTerm = search;
+
+            var suggestions = await repository
+                .GetAutoCompleteIntellisenseAsync(r => searchTerm == "" || r.SearchableName.Contains(searchTerm),
+                r => r.OrderBy(s => s.SearchableName),
+                r => r.SearchableName);
+
+            return Ok(suggestions);
+        }
+
         protected override void RegisterIDisposable(List<IDisposable> disposables)
         {
             disposables.Add(repository);

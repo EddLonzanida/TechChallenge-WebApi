@@ -5,16 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="BaseClasses\ISearchableName.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Eml.ConfigParser" Version="2.0.0.19" />
     <PackageReference Include="Eml.Contracts" Version="2.0.1.56" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="BaseClasses\" />
   </ItemGroup>
 
 </Project>

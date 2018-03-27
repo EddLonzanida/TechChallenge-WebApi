@@ -26,6 +26,9 @@ namespace TechChallengeAspNetCore.Tests.Integration.Migrations
         {
             var dbName = context.Database.GetDbConnection().Database;
 
+            // Console.WriteLine($"Deleting {dbName}..");
+            // context.Database.EnsureDeleted();
+
             Console.WriteLine($"Creating {dbName}..");
             context.Database.EnsureCreated();
 

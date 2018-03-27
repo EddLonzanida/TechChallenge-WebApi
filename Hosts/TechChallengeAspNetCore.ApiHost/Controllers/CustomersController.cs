@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using System.Composition;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -30,7 +28,6 @@ namespace TechChallengeAspNetCore.ApiHost.Controllers
             return await mediator.GetAsync(request);
         }
 
-
         [Route("Risks")]
         [HttpGet]
         public async Task<RiskCustomerResponse> GetRisks(int? pageNumber = 1)
@@ -38,10 +35,6 @@ namespace TechChallengeAspNetCore.ApiHost.Controllers
             var request = new RiskCustomerRequest(pageNumber.Value);
 
             return await mediator.GetAsync(request);
-        }
-
-        protected override void RegisterIDisposable(List<IDisposable> disposables)
-        {
         }
     }
 }
