@@ -9,7 +9,7 @@ namespace TechChallengeAspNetCore.ApiHost
     {
         public static void Main(string[] args)
         {
-            var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
+            var logger = NLog.LogManager.LoadConfiguration("NLog.config").GetCurrentClassLogger();
 
             try
             {
@@ -25,6 +25,7 @@ namespace TechChallengeAspNetCore.ApiHost
             finally
             {
                 Startup.ClassFactory.Dispose();
+                NLog.LogManager.Shutdown();
             }
         }
 
