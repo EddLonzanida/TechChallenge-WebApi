@@ -5,23 +5,19 @@
     <ProjectReference Include="..\..\Business\TechChallengeAspNetCore.Business.Common\TechChallengeAspNetCore.Business.Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Eml.DataRepository" Version="2.0.0.156" />
-  </ItemGroup>
-
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
 
 					<ItemGroup>
-						<None Update="Migrations\JsonSources\bets.json">
+						<None Update="Migrations\SampleDataSources\bets.json">
 							<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 						</None>
-						<None Update="Migrations\JsonSources\customers.json">
+						<None Update="Migrations\SampleDataSources\customers.json">
 							<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 						</None>
-						<None Update="Migrations\JsonSources\races.json">
+						<None Update="Migrations\SampleDataSources\races.json">
 							<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 						</None>
 					</ItemGroup>

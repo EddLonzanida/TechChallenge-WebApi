@@ -1,7 +1,7 @@
 using System.Composition;
 using Eml.Contracts.Entities;
-using Eml.Contracts.Repositories;
 using Eml.DataRepository;
+using Eml.DataRepository.Contracts;
 using Microsoft.Extensions.Configuration;
 
 namespace TechChallengeAspNetCore.Data.Repositories

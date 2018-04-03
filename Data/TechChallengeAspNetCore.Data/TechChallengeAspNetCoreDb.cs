@@ -2,6 +2,7 @@ using System.Linq;
 using Eml.ConfigParser.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Eml.DataRepository;
+using Eml.DataRepository.Contracts;
 using TechChallengeAspNetCore.Business.Common.Entities;
 
 namespace TechChallengeAspNetCore.Data

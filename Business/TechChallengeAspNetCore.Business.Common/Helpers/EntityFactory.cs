@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Eml.Contracts.Repositories;
+using Eml.DataRepository.Contracts;
 using TechChallengeAspNetCore.Business.Common.Entities;
 using Microsoft.EntityFrameworkCore;
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Composition;
 using System.Linq;
 using System.Threading.Tasks;
+using Eml.ControllerBase;
 using Microsoft.AspNetCore.Mvc;
 using Eml.Mediator.Contracts;
-using TechChallengeAspNetCore.ApiHost.BaseClasses;
 using TechChallengeAspNetCore.Business.Requests;
 using TechChallengeAspNetCore.Business.Responses;
 

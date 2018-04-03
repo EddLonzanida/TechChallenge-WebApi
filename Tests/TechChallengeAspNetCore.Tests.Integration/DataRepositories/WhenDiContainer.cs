@@ -1,4 +1,4 @@
-using Eml.Contracts.Repositories;
+using Eml.DataRepository.Contracts;
 using TechChallengeAspNetCore.Business.Common.Entities;
 using TechChallengeAspNetCore.Tests.Integration.BaseClasses;
 using Shouldly;

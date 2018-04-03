@@ -11,7 +11,7 @@ namespace TechChallengeAspNetCore.Data.Migrations
     [DbMigratorExport(Environments.PRODUCTION)]
     public class MainDbMigration : MigratorBase<TechChallengeAspNetCoreDb>
     {
-        private const string JSON_SOURCES = @"Migrations\JsonSources";
+        private const string SAMPLE_DATA_SOURCES = @"Migrations\SampleDataSources";
 
         private const bool ALLOW_IDENTITYINSERT_WHEN_SEEDING = true;
         
@@ -35,9 +35,9 @@ namespace TechChallengeAspNetCore.Data.Migrations
             context.Database.Migrate();
 
             Console.WriteLine("Seeding Data..");
-            CustomerData.Seed(context, JSON_SOURCES);
-            RaceData.Seed(context, JSON_SOURCES);
-            BetData.Seed(context, JSON_SOURCES);
+            CustomerData.Seed(context, SAMPLE_DATA_SOURCES);
+            RaceData.Seed(context, SAMPLE_DATA_SOURCES);
+            BetData.Seed(context, SAMPLE_DATA_SOURCES);
         }
     }
 }

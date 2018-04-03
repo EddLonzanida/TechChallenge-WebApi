@@ -1,4 +1,3 @@
-using Eml.Contracts.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Shouldly;
 using System.Linq;
@@ -6,7 +5,7 @@ using System.Threading.Tasks;
 using Xunit;
 using TechChallengeAspNetCore.Business.Common.Entities;
 using TechChallengeAspNetCore.Tests.Integration.BaseClasses;
-using Eml.DataRepository;
+using Eml.DataRepository.Contracts;
 
 namespace TechChallengeAspNetCore.Tests.Integration.DataRepositories
 {
@@ -131,7 +130,7 @@ namespace TechChallengeAspNetCore.Tests.Integration.DataRepositories
         {
             const string searchTerm = "ar";
 
-            var repository = (ITableMaintenance<Horse>)classFactory.GetExport<IDataRepositoryInt<Horse>>();
+            var repository = classFactory.GetExport<IDataRepositoryInt<Horse>>();
 
             var results = repository.GetPagedList(1, r => r.Include(s => s.Race),
                 r => r.Name.Contains(searchTerm),

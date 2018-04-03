@@ -22,16 +22,16 @@
 
 
 					<ItemGroup>
-						<None Update="SampleData\bets.json">
+						<None Update="SampleDataSources\bets.json">
 							<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 						</None>
-						<None Update="SampleData\customers.json">
+						<None Update="SampleDataSources\customers.json">
 							<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 						</None>
-						<None Update="SampleData\races.json">
+						<None Update="SampleDataSources\races.json">
 							<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 						</None>
-						<None Update="SampleData\TotalBetAmountResponse.json">
+						<None Update="SampleDataSources\TotalBetAmountResponse.json">
 							<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 						</None>
 					</ItemGroup>

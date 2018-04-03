@@ -1,7 +1,6 @@
 using System;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using NLog.Web;
 
 namespace TechChallengeAspNetCore.ApiHost
 {

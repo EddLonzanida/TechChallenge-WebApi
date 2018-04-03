@@ -12,7 +12,7 @@ namespace TechChallengeAspNetCore.Tests.Integration.Migrations
     [DbMigratorExport(Environments.INTEGRATIONTEST)]
     public class IntegrationTestDbMigration : MigratorBase<TechChallengeAspNetCoreDb>
     {
-        private const string JSON_SOURCES = @"Migrations\JsonSources";
+        private const string SAMPLE_DATA_SOURCES = @"Migrations\SampleDataSources";
 
         private const bool ALLOW_IDENTITYINSERT_WHEN_SEEDING = true;
         
@@ -26,8 +26,8 @@ namespace TechChallengeAspNetCore.Tests.Integration.Migrations
         {
             var dbName = context.Database.GetDbConnection().Database;
 
-            // Console.WriteLine($"Deleting {dbName}..");
-            // context.Database.EnsureDeleted();
+            Console.WriteLine($"Deleting {dbName}..");
+            context.Database.EnsureDeleted();
 
             Console.WriteLine($"Creating {dbName}..");
             context.Database.EnsureCreated();
@@ -36,9 +36,9 @@ namespace TechChallengeAspNetCore.Tests.Integration.Migrations
             context.Database.Migrate();
 
             Console.WriteLine("Seeding Data..");
-            CustomerData.Seed(context, JSON_SOURCES);
-            RaceData.Seed(context, JSON_SOURCES);
-            BetData.Seed(context, JSON_SOURCES);
+            CustomerData.Seed(context, SAMPLE_DATA_SOURCES);
+            RaceData.Seed(context, SAMPLE_DATA_SOURCES);
+            BetData.Seed(context, SAMPLE_DATA_SOURCES);
         }
     }
 }

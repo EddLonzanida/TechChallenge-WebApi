@@ -9,7 +9,7 @@ namespace TechChallengeAspNetCore.Data.Migrations.Data
         {
             SeedData.Execute("Races", () =>
             {
-                var intialData = Eml.DataRepository.Seed.GetStubs<Race>("races", relativePath);
+                var intialData = Eml.DataRepository.Seed.GetJsonStubs<Race>("races", relativePath);
 
                 context.Races.AddRange(intialData);
                 context.SaveChanges();

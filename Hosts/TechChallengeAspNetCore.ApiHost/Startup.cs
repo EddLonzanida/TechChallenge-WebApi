@@ -71,27 +71,27 @@ namespace TechChallengeAspNetCore.ApiHost
                 return Bootstrapper.Init(API_NAME, instanceRegistrations);
             });
 
-            var rateLimits = ClassFactory.GetExport<RateLimitsConfig>();
+            //var rateLimits = ClassFactory.GetExport<RateLimitsConfig>();
 
-            services.AddMemoryCache();
-            services.Configure<IpRateLimitOptions>(options =>
-            {
-                options.GeneralRules = rateLimits.Value;
-            });
-            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
-            services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
-            services.AddHttpCacheHeaders(
-                expirationModelOptions =>
-                {
-                    expirationModelOptions.MaxAge = 600;
-                    expirationModelOptions.SharedMaxAge = 300;
-                },
-                validationModelOptions =>
-                {
-                    validationModelOptions.AddMustRevalidate = true;
-                    validationModelOptions.AddProxyRevalidate = true;
-                });
-            services.AddResponseCaching();
+            //services.AddMemoryCache();
+            //services.Configure<IpRateLimitOptions>(options =>
+            //{
+            //    options.GeneralRules = rateLimits.Value;
+            //});
+            //services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            //services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+            //services.AddHttpCacheHeaders(
+            //    expirationModelOptions =>
+            //    {
+            //        expirationModelOptions.MaxAge = 600;
+            //        expirationModelOptions.SharedMaxAge = 300;
+            //    },
+            //    validationModelOptions =>
+            //    {
+            //        validationModelOptions.AddMustRevalidate = true;
+            //        validationModelOptions.AddProxyRevalidate = true;
+            //    });
+            //services.AddResponseCaching();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -127,7 +127,7 @@ namespace TechChallengeAspNetCore.ApiHost
                     }
                 });
             });
-            app.UseIpRateLimiting();
+            //app.UseIpRateLimiting();
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
@@ -135,13 +135,16 @@ namespace TechChallengeAspNetCore.ApiHost
                 c.RoutePrefix = LAUNCH_URL;
                 c.EnableFilter();
             });
-			
-			//TODO: Remove after debugging.
-			var redirectRootToSwagger = new RewriteOptions().AddRedirect("^$", LAUNCH_URL);
-			app.UseRewriter(redirectRootToSwagger);
-            
-            app.UseResponseCaching();
-            app.UseHttpCacheHeaders(); 
+
+            var whiteListConfig = new WhiteListConfig(Configuration);
+
+            app.UseCors(builder => builder.WithOrigins(whiteListConfig.Value.ToArray())
+                .AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod());
+
+            //app.UseResponseCaching();
+            //app.UseHttpCacheHeaders(); 
             app.UseMvc();
         }
     }
