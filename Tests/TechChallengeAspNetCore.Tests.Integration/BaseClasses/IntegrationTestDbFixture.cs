@@ -67,4 +67,3 @@ namespace TechChallengeAspNetCore.Tests.Integration.BaseClasses
         // ICollectionFixture<> interfaces.
     }
 }
-

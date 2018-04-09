@@ -15,4 +15,3 @@ namespace TechChallengeAspNetCore.Business.Common.Entities
         public virtual List<Horse> Horses { get; set; }
     }
 }
-

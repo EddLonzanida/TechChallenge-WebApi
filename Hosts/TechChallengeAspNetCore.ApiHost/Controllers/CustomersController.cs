@@ -39,7 +39,7 @@ namespace TechChallengeAspNetCore.ApiHost.Controllers
 
             return await mediator.GetAsync(request);
         }
-
+        
         protected override async Task<SearchResponse<Customer>> GetAll(string search = "", int? page = 1, bool? desc = false, int? sortColumn = 0)
         {
              search = search.ToLower();
@@ -55,4 +55,3 @@ namespace TechChallengeAspNetCore.ApiHost.Controllers
         }
     }
 }
-

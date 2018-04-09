@@ -16,4 +16,3 @@ namespace TechChallengeAspNetCore.Business.Requests
         }
     }
 }
-

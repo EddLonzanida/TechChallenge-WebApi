@@ -15,4 +15,3 @@ namespace TechChallengeAspNetCore.Business.Common.Dto
         public double WinAmount { get; set; }
     }
 }
-

@@ -11,4 +11,3 @@ namespace TechChallengeAspNetCore.Business.Common.Dto
         public List<Bet> Bets { get; set; }
     }
 }
-

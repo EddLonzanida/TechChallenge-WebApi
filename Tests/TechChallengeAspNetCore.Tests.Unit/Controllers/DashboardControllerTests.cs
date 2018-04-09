@@ -29,4 +29,3 @@ namespace TechChallengeAspNetCore.Tests.Unit.Controllers
         }
     }
 }
-

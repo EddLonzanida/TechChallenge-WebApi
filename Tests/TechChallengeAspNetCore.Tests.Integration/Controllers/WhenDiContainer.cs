@@ -32,4 +32,3 @@ namespace TechChallengeAspNetCore.Tests.Integration.Controllers
         }
     }
 }
-

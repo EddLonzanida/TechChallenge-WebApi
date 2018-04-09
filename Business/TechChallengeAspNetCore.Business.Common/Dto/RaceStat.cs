@@ -17,4 +17,3 @@ namespace TechChallengeAspNetCore.Business.Common.Dto
         public List<HorseStat> HorseStats { get; set; } = new List<HorseStat>();
     }
 }
-

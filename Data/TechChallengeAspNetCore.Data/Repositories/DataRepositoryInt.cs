@@ -1,7 +1,7 @@
 using System.Composition;
 using Eml.Contracts.Entities;
-using Eml.DataRepository;
 using Eml.DataRepository.Contracts;
+using Eml.DataRepository;
 using Microsoft.Extensions.Configuration;
 
 namespace TechChallengeAspNetCore.Data.Repositories
@@ -16,4 +16,3 @@ namespace TechChallengeAspNetCore.Data.Repositories
         }
     }
 }
-

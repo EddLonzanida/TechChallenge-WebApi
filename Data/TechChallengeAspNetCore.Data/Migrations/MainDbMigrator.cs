@@ -4,20 +4,18 @@ using Eml.DataRepository;
 using Eml.DataRepository.Attributes;
 using Eml.DataRepository.BaseClasses;
 using Microsoft.EntityFrameworkCore;
-using TechChallengeAspNetCore.Data.Migrations.Data;
+using TechChallengeAspNetCore.Data.Migrations.Seeders;
 
 namespace TechChallengeAspNetCore.Data.Migrations
 {
     [DbMigratorExport(Environments.PRODUCTION)]
-    public class MainDbMigration : MigratorBase<TechChallengeAspNetCoreDb>
+    public class MainDbMigrator : MigratorBase<TechChallengeAspNetCoreDb>
     {
         private const string SAMPLE_DATA_SOURCES = @"Migrations\SampleDataSources";
 
-        private const bool ALLOW_IDENTITYINSERT_WHEN_SEEDING = true;
-        
 		[ImportingConstructor]
-        public MainDbMigration(MainDbConnectionString mainDbConnectionString) 
-            :base(mainDbConnectionString.Value, ALLOW_IDENTITYINSERT_WHEN_SEEDING)
+        public MainDbMigrator(MainDbConnectionString mainDbConnectionString) 
+            :base(mainDbConnectionString.Value)
         {
         }
 
@@ -35,10 +33,9 @@ namespace TechChallengeAspNetCore.Data.Migrations
             context.Database.Migrate();
 
             Console.WriteLine("Seeding Data..");
-            CustomerData.Seed(context, SAMPLE_DATA_SOURCES);
-            RaceData.Seed(context, SAMPLE_DATA_SOURCES);
-            BetData.Seed(context, SAMPLE_DATA_SOURCES);
+            CustomerSeeder.Seed(context, SAMPLE_DATA_SOURCES);
+            RaceSeeder.Seed(context, SAMPLE_DATA_SOURCES);
+            BetSeeder.Seed(context, SAMPLE_DATA_SOURCES);
         }
     }
 }
-	

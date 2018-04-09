@@ -2,15 +2,12 @@ using System.Linq;
 using Eml.ConfigParser.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Eml.DataRepository;
-using Eml.DataRepository.Contracts;
 using TechChallengeAspNetCore.Business.Common.Entities;
 
 namespace TechChallengeAspNetCore.Data
 {
-    public class TechChallengeAspNetCoreDb : DbContext, IAllowIdentityInsertWhenSeeding
+    public class TechChallengeAspNetCoreDb : DbContext
     {
-        public bool AllowIdentityInsertWhenSeeding { get; set; } //= true;
-
         public DbSet<Customer> Customers { get; set; }
 
         public DbSet<Bet> Bets { get; set; }
@@ -27,9 +24,11 @@ namespace TechChallengeAspNetCore.Data
             optionsBuilder.UseSqlServer(mainDbConnectionString.Value);
         }
 
+        private bool allowIdentityInsertWhenSeeding { get; set; } = true;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            if (AllowIdentityInsertWhenSeeding)
+            if (allowIdentityInsertWhenSeeding)
             {
                 foreach (var pb in modelBuilder.Model
                     .GetEntityTypes()
@@ -45,4 +44,3 @@ namespace TechChallengeAspNetCore.Data
         }
     }
 }
-

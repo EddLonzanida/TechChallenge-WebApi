@@ -1,11 +1,11 @@
 using System;
 using Eml.DataRepository;
 using Eml.Mediator.Contracts;
-using TechChallengeAspNetCore.Business.Responses;
 using Microsoft.AspNetCore.Mvc;
 using NSubstitute;
-using TechChallengeAspNetCore.Business.Common.Entities;
 using System.Collections.Generic;
+using TechChallengeAspNetCore.Business.Responses;
+using TechChallengeAspNetCore.Business.Common.Entities;
 
 namespace TechChallengeAspNetCore.Tests.Unit.BaseClasses
 {
@@ -24,8 +24,8 @@ namespace TechChallengeAspNetCore.Tests.Unit.BaseClasses
 
         protected ControllerTestBase()
         {
-            totalBetAmountResponseStub = Seed.GetJsonStub<TotalBetAmountResponse>("TotalBetAmountResponse", SAMPLE_DATA_SOURCES);
-            customerStub = Seed.GetJsonStubs<Customer>("customers", SAMPLE_DATA_SOURCES);
+            totalBetAmountResponseStub = Seeder.GetJsonStub<TotalBetAmountResponse>("TotalBetAmountResponse", SAMPLE_DATA_SOURCES);
+            customerStub = Seeder.GetJsonStubs<Customer>("customers", SAMPLE_DATA_SOURCES);
           
             mediator = Substitute.For<IMediator>();
         }

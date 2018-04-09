@@ -13,7 +13,7 @@ namespace TechChallengeAspNetCore.ConsoleSeeder
     {
         private const string APP_PREFIX = "TechChallengeAspNetCore";
 
-        private const string DB_DIRECTORY = @".\DataBase";
+        private const string DB_DIRECTORY = @"DataBase";
 
         private static IClassFactory classFactory;
 
@@ -49,4 +49,3 @@ namespace TechChallengeAspNetCore.ConsoleSeeder
         }
     }
 }
-

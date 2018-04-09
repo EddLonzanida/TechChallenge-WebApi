@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Composition;
 using System.Linq;
 using System.Threading.Tasks;
-using Eml.ControllerBase;
 using Microsoft.AspNetCore.Mvc;
+using Eml.ControllerBase;
 using Eml.Mediator.Contracts;
 using TechChallengeAspNetCore.Business.Requests;
 using TechChallengeAspNetCore.Business.Responses;
@@ -20,7 +20,7 @@ namespace TechChallengeAspNetCore.ApiHost.Controllers
         }
 
         [HttpGet]
-        [Route("")]
+        [Route("Bets")]
         public async Task<TotalBetAmountResponse> Get()
         {
             var request = new TotalBetAmountRequest();
@@ -45,4 +45,3 @@ namespace TechChallengeAspNetCore.ApiHost.Controllers
         }
     }
 }
-

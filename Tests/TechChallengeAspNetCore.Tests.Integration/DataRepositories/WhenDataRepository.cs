@@ -7,6 +7,7 @@ using TechChallengeAspNetCore.Business.Common.Entities;
 using TechChallengeAspNetCore.Tests.Integration.BaseClasses;
 using Eml.DataRepository.Contracts;
 
+
 namespace TechChallengeAspNetCore.Tests.Integration.DataRepositories
 {
     public class WhenDataRepository : IntegrationTestDbBase
@@ -140,5 +141,3 @@ namespace TechChallengeAspNetCore.Tests.Integration.DataRepositories
         }
     }
 }
-
-

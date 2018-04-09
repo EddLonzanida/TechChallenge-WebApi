@@ -29,4 +29,3 @@ namespace TechChallengeAspNetCore.ApiHost.Helpers
         }
     }
 }
-

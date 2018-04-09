@@ -11,4 +11,3 @@ namespace TechChallengeAspNetCore.ApiHost.Configurations
         }
     }
 }
-

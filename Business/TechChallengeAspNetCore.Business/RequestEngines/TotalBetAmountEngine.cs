@@ -47,4 +47,3 @@ namespace TechChallengeAspNetCore.Business.RequestEngines
         }
     }
 }
-

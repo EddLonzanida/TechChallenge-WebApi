@@ -7,4 +7,3 @@ namespace TechChallengeAspNetCore.Business.Common.Dto
         public double Totalstake { get; set; }
     }
 }
-

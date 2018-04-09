@@ -1,15 +1,15 @@
 using TechChallengeAspNetCore.Business.Common.Entities;
-using  TechChallengeAspNetCore.Data.Migrations.Utils;
+using Eml.DataRepository;
 
-namespace TechChallengeAspNetCore.Data.Migrations.Data
+namespace TechChallengeAspNetCore.Data.Migrations.Seeders
 {
-    public static class CustomerData
+    public static class CustomerSeeder
     {
         public static void Seed(TechChallengeAspNetCoreDb context, string relativePath)
         {
-            SeedData.Execute("Customers", () =>
+            Seeder.Execute("Customers", () =>
             {
-                var intialData = Eml.DataRepository.Seed.GetJsonStubs<Customer>("customers", relativePath);
+                var intialData = Seeder.GetJsonStubs<Customer>("customers", relativePath);
 
                 context.Customers.AddRange(intialData);
                 context.SaveChanges();
@@ -17,4 +17,3 @@ namespace TechChallengeAspNetCore.Data.Migrations.Data
         }
     }
 }
-

@@ -21,5 +21,3 @@ namespace TechChallengeAspNetCore.Tests.Integration.BaseClasses
         }
     }
 }
-
-

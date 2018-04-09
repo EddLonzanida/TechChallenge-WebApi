@@ -29,9 +29,9 @@ namespace TechChallengeAspNetCore.Tests.Unit.BaseClasses
 
         protected EngineTestBase()
         {
-            racesStub = Seed.GetJsonStubs<Race>("races", SAMPLE_DATA_SOURCES);
-            betStub = Seed.GetJsonStubs<Bet>("bets", SAMPLE_DATA_SOURCES);
-            customerStub = Seed.GetJsonStubs<Customer>("customers", SAMPLE_DATA_SOURCES);
+            racesStub = Seeder.GetJsonStubs<Race>("races", SAMPLE_DATA_SOURCES);
+            betStub = Seeder.GetJsonStubs<Bet>("bets", SAMPLE_DATA_SOURCES);
+            customerStub = Seeder.GetJsonStubs<Customer>("customers", SAMPLE_DATA_SOURCES);
 
             raceRepository = Substitute.For<IDataRepositoryInt<Race>>();
             betRepository = Substitute.For<IDataRepositoryInt<Bet>>();

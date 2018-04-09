@@ -31,4 +31,3 @@ namespace TechChallengeAspNetCore.ApiHost.Attributes
         }
     }
 }
-

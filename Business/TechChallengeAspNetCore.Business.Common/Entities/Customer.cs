@@ -12,4 +12,3 @@ namespace TechChallengeAspNetCore.Business.Common.Entities
         public string SearchableName => Name;
     }
 }
-

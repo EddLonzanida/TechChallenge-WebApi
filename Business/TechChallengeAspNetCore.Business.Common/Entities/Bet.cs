@@ -20,4 +20,3 @@ namespace TechChallengeAspNetCore.Business.Common.Entities
         public double Stake { get; set; }
     }
 }
-

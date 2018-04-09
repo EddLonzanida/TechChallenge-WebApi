@@ -12,7 +12,7 @@ using TechChallengeAspNetCore.Business.Common.Dto;
 
 namespace TechChallengeAspNetCore.Business.RequestEngines
 {
-  public class RaceStatEngine : IRequestAsyncEngine<RaceStatRequest, RaceStatResponse>
+    public class RaceStatEngine : IRequestAsyncEngine<RaceStatRequest, RaceStatResponse>
     {
         private readonly IDataRepositoryInt<Race> racesRepository;
 
@@ -88,4 +88,3 @@ namespace TechChallengeAspNetCore.Business.RequestEngines
         }
     }
 }
-

@@ -16,4 +16,3 @@ namespace TechChallengeAspNetCore.Business.Common.Entities
         public virtual Race Race { get; set; }
     }
 }
-
