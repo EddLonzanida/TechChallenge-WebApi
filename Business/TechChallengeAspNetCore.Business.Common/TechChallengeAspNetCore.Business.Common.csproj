@@ -5,7 +5,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Eml.DataRepository" Version="2.0.0.172" />
+    <PackageReference Include="Eml.DataRepository" Version="2.0.0.173" />
     <PackageReference Include="Eml.EntityBaseClasses" Version="1.0.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.2" />
   </ItemGroup>

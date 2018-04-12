@@ -136,7 +136,7 @@ namespace TechChallengeAspNetCore.ApiHost
                 c.EnableFilter();
             });
 
-			// Check the port in TechChallengeAspNetCore.Spa -> Properties -> launchSettings.json and update TechChallengeAspNetCore.ApiHost -> appsettings.json -> WhiteList entry
+            // Check the port in TechChallengeAspNetCore.Spa -> Properties -> launchSettings.json and update TechChallengeAspNetCore.ApiHost -> appsettings.json -> WhiteList entry
             var whiteListConfig = new WhiteListConfig(Configuration);
 
             app.UseCors(builder => builder.WithOrigins(whiteListConfig.Value.ToArray())

@@ -13,8 +13,6 @@ namespace TechChallengeAspNetCore.ConsoleSeeder
     {
         private const string APP_PREFIX = "TechChallengeAspNetCore";
 
-        private const string DB_DIRECTORY = @"DataBase";
-
         private static IClassFactory classFactory;
 
         static void Main(string[] args)
@@ -31,7 +29,7 @@ namespace TechChallengeAspNetCore.ConsoleSeeder
                 Utils.Console.WriteLine("DestroyDb if any..");
 
                 dbMigration.DestroyDb();
-                dbMigration.CreateDb(DB_DIRECTORY);
+                dbMigration.CreateDb();
 
 				Utils.Console.WriteLine("Done. Press enter to exit...");
             }
